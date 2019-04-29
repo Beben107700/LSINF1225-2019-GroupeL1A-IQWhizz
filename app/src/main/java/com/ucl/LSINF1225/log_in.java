@@ -1,15 +1,13 @@
-package com.example.iqwhizz;
+package com.ucl.LSINF1225;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class log_in extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //Un commentaire pour essayer
-        ///HOHOHDOHDSOHSDFOIF
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_log_in);
     }
 }
