@@ -6,13 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".log_in">
 
-    <Button
-        android:id="@+id/buttonLog_in"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="556dp"
-        android:text="Log in"
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="50dip"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="460dp"
+        android:background="@drawable/buttonLog_in"
+        android:contentDescription="@string/log_in"
+        android:onClick="goToMenu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="264dp"
+        android:contentDescription="editEmail"
+        android:ems="10"
+        android:hint="firstname.name@student.uclouvain.be"
+        android:inputType="textEmailAddress"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="364dp"
+        android:contentDescription="editPassword"
+        android:ems="10"
+        android:hint="**********"
+        android:inputType="textPassword"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageEmail"
+        android:layout_width="248dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="192dp"
+        android:contentDescription="imageEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/texteEmail" />
+
+    <ImageView
+        android:id="@+id/imagePassword"
+        android:layout_width="138dp"
+        android:layout_height="267dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="235dp"
+        android:contentDescription="imagePassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/textePassword" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="354dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="41dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imageLog_in" />
+
 </android.support.constraint.ConstraintLayout>

@@ -9,5 +9,11 @@ public class log_in extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+
+        public void goToMenu (View view){
+            Intent intent = new Intent (this, menu.class);
+            startActivity(intent);
+        }
+
     }
 }
