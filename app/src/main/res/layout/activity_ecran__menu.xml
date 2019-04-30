@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nb_players"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Ecran_Menu">
@@ -25,7 +26,7 @@
         android:layout_height="76dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="260dp"
         android:background="@android:color/holo_blue_light"
         android:text="@string/Complete_test"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
@@ -40,7 +41,7 @@
         android:layout_height="76dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="316dp"
+        android:layout_marginBottom="384dp"
         android:background="@android:color/holo_blue_light"
         android:text="@string/quick_test"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
@@ -54,7 +55,7 @@
         android:layout_height="76dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="132dp"
         android:background="@android:color/holo_blue_light"
         android:text="@string/topic_test"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
@@ -67,7 +68,7 @@
         android:layout_width="116dp"
         android:layout_height="36dp"
         android:layout_marginStart="76dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="276dp"
         android:fontFamily="casual"
         android:text="@string/players"
@@ -75,18 +76,31 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.736"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="113dp"
-        android:layout_height="55dp"
-        android:checked="false"
-        android:clickable="false"
-        android:text="CheckBox"
-        tools:layout_editor_absoluteX="204dp"
-        tools:layout_editor_absoluteY="244dp" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="151dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="68dp"
+        android:entries="@array/nb_players"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="@string/my_results"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="640dp" />
 
 </android.support.constraint.ConstraintLayout>

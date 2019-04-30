@@ -13,5 +13,10 @@
     <string name="Complete_test">COMPLETE TEST</string>
     <string name="quick_test">QUICK TEST</string>
     <string name="players">Players:</string>
+    <string name="my_results"><u>My Results</u></string>
+    <string-array name="nb_players">
+        <item>One Player</item>
+        <item>Two Players</item>
+    </string-array>
 
 </resources>
