@@ -59,6 +59,7 @@
         android:background="@android:color/holo_blue_light"
         android:text="@string/topic_test"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:onClick="goToTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -102,5 +103,15 @@
         android:textStyle="bold"
         tools:layout_editor_absoluteX="137dp"
         tools:layout_editor_absoluteY="640dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="47dp"
+        android:layout_height="46dp"
+        android:background="@android:color/background_light"
+        android:onClick="goTosettings"
+        app:srcCompat="@android:drawable/ic_menu_preferences"
+        tools:layout_editor_absoluteX="343dp"
+        tools:layout_editor_absoluteY="142dp" />
 
 </android.support.constraint.ConstraintLayout>
