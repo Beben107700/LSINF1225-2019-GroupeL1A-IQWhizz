@@ -3,10 +3,19 @@
     <string name="sign_in">Sign in</string>
     <string name="log_in">Log in</string>
     <string name="name">Name</string>
-    <string name="name">Name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="apply_changes">APPLY CHANGES</string>
+    <string name="topic_test">TOPIC TEST</string>
+    <string name="Complete_test">COMPLETE TEST</string>
+    <string name="quick_test">QUICK TEST</string>
+    <string name="players">Players:</string>
+    <string name="my_results"><u>My Results</u></string>
+    <string-array name="nb_players">
+        <item>One Player</item>
+        <item>Two Players</item>
+    </string-array>
+
 </resources>

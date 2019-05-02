@@ -11,7 +11,7 @@
         android:layout_height="50dip"
         android:layout_marginStart="104dp"
         android:layout_marginTop="460dp"
-        android:background="@drawable/buttonLog_in"
+        android:background="@drawable/buttonlog_in"
         android:contentDescription="@string/log_in"
         android:onClick="goToMenu"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,7 @@
         android:contentDescription="imageEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/texteEmail" />
+        app:srcCompat="@drawable/texteemail" />
 
     <ImageView
         android:id="@+id/imagePassword"
@@ -65,7 +65,7 @@
         android:contentDescription="imagePassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/textePassword" />
+        app:srcCompat="@drawable/textepassword" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -75,6 +75,6 @@
         android:layout_marginTop="41dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/imageLog_in" />
+        app:srcCompat="@drawable/imagelog_in" />
 
 </android.support.constraint.ConstraintLayout>
