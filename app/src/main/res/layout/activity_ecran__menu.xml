@@ -20,50 +20,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/imagelog_in" />
 
-    <Button
-        android:id="@+id/ecranmenucomplete"
-        android:layout_width="253dp"
-        android:layout_height="76dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="260dp"
-        android:background="@android:color/holo_blue_light"
-        android:onClick="goToComplete"
-        android:text="@string/Complete_test"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/ecranmenuquick"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="253dp"
-        android:layout_height="76dp"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="384dp"
-        android:background="@android:color/holo_blue_light"
+        android:layout_marginBottom="352dp"
+        android:background="@drawable/buttonQuickTest"
         android:onClick="goToQuick"
-        android:text="@string/quick_test"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/ecranmenutopic"
-        android:layout_width="253dp"
-        android:layout_height="76dp"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="132dp"
-        android:background="@android:color/holo_blue_light"
+        android:layout_marginBottom="208dp"
+        android:background="@drawable/buttonQuickTest"
         android:onClick="goToThemes"
-        android:text="@string/topic_test"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -95,6 +79,7 @@
 
     <ImageButton
         android:id="@+id/ecranmenusettings"
+
         android:layout_width="47dp"
         android:layout_height="46dp"
         android:layout_marginTop="142dp"
@@ -119,5 +104,20 @@
         android:textStyle="bold"
         tools:layout_editor_absoluteX="137dp"
         tools:layout_editor_absoluteY="640dp" />
+
+
+    <Button
+        android:id="@+id/ecranmenucomplete"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="280dp"
+        android:background="@drawable/buttonNormalTest"
+        android:onClick="goToComplete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
