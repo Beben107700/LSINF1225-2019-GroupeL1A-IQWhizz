@@ -20,90 +20,124 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/imagelog_in" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="218dp"
-        android:layout_height="372dp"
-        app:srcCompat="@drawable/themes"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="257dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:clickable="false"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="269dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="314dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="362dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="404dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="451dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="495dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="538dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="584dp" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="182dp"
+        android:layout_marginBottom="486dp"
         android:fontFamily="casual"
         android:text="Thèmes :"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="36sp"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="182dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="82dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/StartButton"
         android:layout_width="204dp"
         android:layout_height="73dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="642dp"
+        android:layout_marginBottom="16dp"
         android:background="@android:color/holo_blue_dark"
         android:text="Start Test"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="642dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/ButtonGroup"
+        android:layout_width="259dp"
+        android:layout_height="372dp"
+        android:layout_marginTop="279dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="82dp">
+
+        <RadioButton
+            android:id="@+id/ButtonMath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:clickable="false"
+            android:text="Mathematics"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="269dp" />
+
+        <RadioButton
+            android:id="@+id/ButtonBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biology"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="314dp" />
+
+        <RadioButton
+            android:id="@+id/ButtonPhys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Physics"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="362dp" />
+
+        <RadioButton
+            android:id="@+id/ButtonChe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chemistry"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="404dp" />
+
+        <RadioButton
+            android:id="@+id/ButtonLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logic"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="451dp" />
+
+        <RadioButton
+            android:id="@+id/ButtonCul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Culture"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="495dp" />
+
+        <RadioButton
+            android:id="@+id/ButtonHist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="538dp" />
+
+        <RadioButton
+            android:id="@+id/ButtonOth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="584dp" />
+    </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>

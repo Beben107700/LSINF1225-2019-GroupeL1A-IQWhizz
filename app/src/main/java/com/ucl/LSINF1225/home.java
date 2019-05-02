@@ -20,6 +20,8 @@ public class home extends AppCompatActivity {
     }
     public void onSignup(View v ){
         //Fct qui s'éxécute quand tu pousses sur signup
+        Intent creation = new Intent(getApplicationContext(), sing_in.class);
+        startActivity(creation);
 
     }
     public void onLogin(View v){
