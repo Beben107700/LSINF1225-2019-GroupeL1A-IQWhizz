@@ -51,12 +51,10 @@
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="64dp"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="365dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -91,6 +89,7 @@
         android:layout_width="247dp"
         android:layout_height="87dp"
         android:layout_marginTop="562dp"
+        android:onClick="buttonPress"
         android:text="@string/apply_changes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
