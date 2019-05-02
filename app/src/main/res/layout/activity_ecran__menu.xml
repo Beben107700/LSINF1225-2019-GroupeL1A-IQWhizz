@@ -29,7 +29,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="352dp"
-        android:background="@drawable/buttonQuickTest"
+        android:background="@drawable/buttonquicktest"
         android:onClick="goToQuick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,11 +43,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="208dp"
-        android:background="@drawable/buttonQuickTest"
+        android:background="@drawable/buttonquicktest"
         android:onClick="goToThemes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -113,7 +113,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="280dp"
-        android:background="@drawable/buttonNormalTest"
+        android:background="@drawable/buttonnormaltest"
         android:onClick="goToComplete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
