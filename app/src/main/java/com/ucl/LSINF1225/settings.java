@@ -34,9 +34,9 @@ public class settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
     }
     public void buttonPress(View view){
-        String outname = name.getText();
-        String outemail = email.getText();
-        String outpassword = password.getText();
+        String outname = name.getText().toString();
+        String outemail = email.getText().toString();
+        String outpassword = password.getText().toString();
 
         //FAUT ENVOYER A LA BDD
     }
