@@ -22,8 +22,8 @@ public class home extends AppCompatActivity {
         //Fct qui s'éxécute quand tu pousses sur signup
         Intent intent = new Intent(getApplicationContext(), sing_in.class);
         startActivity(intent);
-
     }
+
     public void goToLogIn(View v){
         //Fct qui s'éxécute qd tu pousses sur login
         Intent intent = new Intent(getApplicationContext(), log_in.class);
