@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.929"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/ecranmenuresults"
@@ -120,7 +120,7 @@
         android:layout_marginStart="147dp"
         android:layout_marginTop="160dp"
         android:layout_marginEnd="90dp"
-        android:text="@nomDuJoueur"
+        android:text="nomDuJoueur"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp"
         android:textStyle="bold"
