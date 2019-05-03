@@ -18,16 +18,16 @@ public class home extends AppCompatActivity {
         signupbutton= (ImageButton)findViewById(R.id.homesignupbutton);
 
     }
-    public void onSignup(View v ){
+    public void goToSignIn(View v ){
         //Fct qui s'éxécute quand tu pousses sur signup
-        Intent creation = new Intent(getApplicationContext(), sing_in.class);
-        startActivity(creation);
+        Intent intent = new Intent(getApplicationContext(), sing_in.class);
+        startActivity(intent);
 
     }
-    public void onLogin(View v){
+    public void goToLogIn(View v){
         //Fct qui s'éxécute qd tu pousses sur login
-        Intent macouille = new Intent(getApplicationContext(), log_in.class);
-        startActivity(macouille);
+        Intent intent = new Intent(getApplicationContext(), log_in.class);
+        startActivity(intent);
     }
 
 }

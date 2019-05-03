@@ -6,23 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".sing_in">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="IQWIZZ"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/firstname_t"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="160dp"
         android:ems="10"
         android:hint="Firstname"
         android:inputType="textPersonName"
@@ -34,12 +23,11 @@
         android:id="@+id/mail_t"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="240dp"
         android:ems="10"
-        android:hint="Mail"
+        android:hint="firstname.name@student.uclouvain.be"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,9 +35,9 @@
         android:id="@+id/mdp_t"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="312dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="**********"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +47,7 @@
         android:id="@+id/gender_t"
         android:layout_width="wrap_content"
         android:layout_height="59dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="408dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +75,7 @@
         android:id="@+id/age_t"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="456dp"
+        android:layout_marginTop="504dp"
         android:ems="10"
         android:hint="Age"
         android:inputType="number"
@@ -97,15 +85,47 @@
 
     <Button
         android:id="@+id/create"
-        android:layout_width="132dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="540dp"
-        android:text="SING IN"
-        android:textSize="24sp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="588dp"
+        android:background="@drawable/buttonsign_in"
+        android:onClick="goToEM"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imagesignin"
+        android:layout_width="326dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="604dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imagelog_in" />
+
+    <ImageView
+        android:id="@+id/imageEmail"
+        android:layout_width="248dp"
+        android:layout_height="110dp"
+        android:contentDescription="imageEmail"
+        app:srcCompat="@drawable/texteemail"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <ImageView
+        android:id="@+id/imageEmail"
+        android:layout_width="104dp"
+        android:layout_height="34dp"
+        android:contentDescription="imageEmail"
+        app:srcCompat="@drawable/age"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="227dp" />
 
 
 </android.support.constraint.ConstraintLayout>

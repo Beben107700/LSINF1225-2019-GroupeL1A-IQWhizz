@@ -15,15 +15,13 @@ public class Ecran_Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ecran__menu);
+
         themesbtn = (Button)findViewById(R.id.ecranmenutopic);
         quickbtn=(Button)findViewById(R.id.ecranmenuquick);
         completebtn=(Button) findViewById(R.id.ecranmenucomplete);
         resultsbtn=(Button)findViewById(R.id.ecranmenuresults);
-
         settingsbtn = (ImageButton)findViewById(R.id.ecranmenusettings);
-
     }
-
 
     public void goToThemes(View view) {
         Intent intent = new Intent(this, Themes.class);

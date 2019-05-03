@@ -1,5 +1,6 @@
 package com.ucl.LSINF1225;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -53,6 +54,12 @@ public class sing_in extends AppCompatActivity {
         });
 
 
+    }
+
+    public void goToEM(View v){
+        //Fct qui s'éxécute qd tu pousses sur login
+        Intent intent = new Intent(getApplicationContext(), Ecran_Menu.class);
+        startActivity(intent);
     }
 
 

@@ -17,16 +17,11 @@ public class log_in extends AppCompatActivity {
 
         this.log_in = (ImageButton) findViewById(R.id.log_in);
 
-        log_in.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent otherActivity = new Intent(getApplicationContext(),Ecran_Menu.class);
-                startActivity(otherActivity);
-            }
+    }
 
-
-
-        });
-
+    public void goToEM(View v){
+        //Fct qui s'éxécute qd tu pousses sur login
+        Intent intent = new Intent(getApplicationContext(), Ecran_Menu.class);
+        startActivity(intent);
     }
 }
