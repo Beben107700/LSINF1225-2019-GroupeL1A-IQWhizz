@@ -49,6 +49,9 @@ public class sing_in extends AppCompatActivity {
                         selected.getText().toString());
                 databaseManager.close();
 
+                Intent act = new Intent(getApplicationContext(),log_in.class);
+                startActivity(act);
+
 
             }
         });
