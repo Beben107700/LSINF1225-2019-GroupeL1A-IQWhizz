@@ -32,12 +32,12 @@ public class Ecran_Menu extends AppCompatActivity {
         startActivity(intent);
     }
     public void goToQuick(View view) {
-        //Intent intent = new Intent(this, Quick_test.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, question.class);
+        startActivity(intent);
     }
     public void goToComplete(View view) {
-        //Intent intent = new Intent(this, Complete_test.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, question.class);
+        startActivity(intent);
     }
     public void goToResults(View view) {
         //Intent intent = new Intent(this, my_results.class);
