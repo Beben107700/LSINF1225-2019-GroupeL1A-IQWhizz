@@ -9,8 +9,8 @@ import android.content.Intent;
 
 public class Ecran_Menu extends AppCompatActivity {
 
-    private Button themesbtn, quickbtn, completebtn, resultsbtn;
-    private ImageButton settingsbtn;
+    private Button themesbtn, quickbtn, completebtn;
+    private ImageButton settingsbtn, resultsbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +19,7 @@ public class Ecran_Menu extends AppCompatActivity {
         themesbtn = (Button)findViewById(R.id.ecranmenutopic);
         quickbtn=(Button)findViewById(R.id.ecranmenuquick);
         completebtn=(Button) findViewById(R.id.ecranmenucomplete);
-        resultsbtn=(Button)findViewById(R.id.ecranmenuresults);
+        resultsbtn=(ImageButton)findViewById(R.id.ecranmenuresults);
         settingsbtn = (ImageButton)findViewById(R.id.ecranmenusettings);
     }
 

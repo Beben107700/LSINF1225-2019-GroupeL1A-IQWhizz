@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".log_in" />
+        <activity android:name=".Themes" />
     </application>
 
 </manifest>
