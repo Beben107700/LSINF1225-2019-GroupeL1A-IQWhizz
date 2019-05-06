@@ -3,6 +3,7 @@ package com.ucl.LSINF1225;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.ContactsContract;
 
 public class DatabaseManager extends SQLiteOpenHelper {
 
