@@ -14,11 +14,15 @@ public class Themes extends AppCompatActivity {
     private Button StartButton;
     private RadioGroup ButtonGroup;
     private RadioButton ButtonMath, ButtonBio, ButtonPhys, ButtonChe, ButtonLog, ButtonCul, ButtonHis, ButtonOth;
+    private RadioButton selected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        StartButton = (Button)findViewById(R.id.StartButton);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_themes);
+
+        this.StartButton = (Button)findViewById(R.id.StartButton);
         ButtonGroup = (RadioGroup)findViewById(R.id.ButtonGroup);
         ButtonMath = (RadioButton)findViewById(R.id.ButtonMath);
         ButtonBio = (RadioButton)findViewById(R.id.ButtonBio);
@@ -29,42 +33,16 @@ public class Themes extends AppCompatActivity {
         ButtonHis = (RadioButton)findViewById(R.id.ButtonHist);
         ButtonOth = (RadioButton)findViewById(R.id.ButtonOth);
 
+        StartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selected = (RadioButton)findViewById(ButtonGroup.getCheckedRadioButtonId());
+                // Utiliser la BDD pour lancer le bon test par rapport au RadioButton qui est coché
+                // Intent intent = new Intent(getApplicationContext(), Test.class);
+                // startActivity(intent);
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_themes);
-    }
-    public void buttonclick (View view){
-        boolean checked = ((RadioButton) view).isChecked();
-        switch (view.getId()){
-            case R.id.ButtonMath:
-                if (checked)
-                    break;
-            case R.id.ButtonBio:
-                if (checked)
-                    break;
-            case R.id.ButtonPhys:
-                if (checked)
-                    break;
-            case R.id.ButtonChe:
-                if (checked)
-                    break;
-            case R.id.ButtonLog:
-                if (checked)
-                    break;
-            case R.id.ButtonCul:
-                if (checked)
-                    break;
-            case R.id.ButtonHist:
-                if (checked)
-                    break;
-            case R.id.ButtonOth:
-                if (checked)
-                    break;
-        }
+            }
+        });
 
-    }
-    public void GoToTest (View view){
-        // Intent intent = new Intent(this, Test.class);
-        // startActivity(intent);
     }
 }
