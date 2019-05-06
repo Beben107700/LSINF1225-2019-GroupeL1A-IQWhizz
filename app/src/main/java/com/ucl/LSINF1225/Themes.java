@@ -20,7 +20,15 @@ public class Themes extends AppCompatActivity {
 
         StartButton = (Button)findViewById(R.id.StartButton);
         ButtonGroup = (RadioGroup)findViewById(R.id.ButtonGroup);
-
+        ButtonMath = (RadioButton)findViewById(R.id.ButtonMath);
+        ButtonBio = (RadioButton)findViewById(R.id.ButtonBio);
+        ButtonPhys = (RadioButton)findViewById(R.id.ButtonPhys);
+        ButtonChe = (RadioButton)findViewById(R.id.ButtonChe);
+        ButtonLog = (RadioButton)findViewById(R.id.ButtonLog);
+        ButtonCul = (RadioButton)findViewById(R.id.ButtonCul);
+        ButtonHis = (RadioButton)findViewById(R.id.ButtonHist);
+        ButtonOth = (RadioButton)findViewById(R.id.ButtonOth);
+        
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_themes);
@@ -54,5 +62,9 @@ public class Themes extends AppCompatActivity {
                     break;
         }
 
+    }
+    public void GoToTest (View view){
+        // Intent intent = new Intent(this, Test.class);
+        // startActivity(intent);
     }
 }
