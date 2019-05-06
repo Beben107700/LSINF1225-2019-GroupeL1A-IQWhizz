@@ -61,8 +61,6 @@
             android:id="@+id/ButtonMath"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="false"
-            android:clickable="false"
             android:text="Mathematics"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="30sp"
