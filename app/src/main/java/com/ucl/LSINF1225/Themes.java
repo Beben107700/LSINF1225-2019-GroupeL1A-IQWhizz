@@ -28,7 +28,7 @@ public class Themes extends AppCompatActivity {
         ButtonCul = (RadioButton)findViewById(R.id.ButtonCul);
         ButtonHis = (RadioButton)findViewById(R.id.ButtonHist);
         ButtonOth = (RadioButton)findViewById(R.id.ButtonOth);
-        
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_themes);
