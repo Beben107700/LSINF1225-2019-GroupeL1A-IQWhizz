@@ -11,39 +11,51 @@
         android:id="@+id/firstname_t"
         android:layout_width="218dp"
         android:layout_height="45dp"
+        android:layout_marginTop="160dp"
         android:ems="10"
         android:hint="Firstname"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="183dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/mail_t"
         android:layout_width="218dp"
         android:layout_height="40dp"
+        android:layout_marginTop="242dp"
         android:ems="10"
         android:hint="firstname.name@student.uclouvain.be"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="260dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/mdp_t"
         android:layout_width="218dp"
         android:layout_height="45dp"
+        android:layout_marginTop="324dp"
         android:ems="10"
         android:hint="**********"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="333dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/gender_t"
         android:layout_width="98dp"
         android:layout_height="64dp"
+        android:layout_marginTop="420dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="420dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/radioButton5"
@@ -65,73 +77,92 @@
         android:id="@+id/age_t"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="512dp"
         android:ems="10"
         android:hint="Age"
         android:inputType="number"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="527dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/create"
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:layout_marginTop="566dp"
         android:background="@drawable/buttonsign_in"
         android:onClick="goToEM"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="594dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imagesignin"
         android:layout_width="326dp"
         android:layout_height="93dp"
-        app:srcCompat="@drawable/imagelog_in"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="41dp" />
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imagelog_in" />
 
     <ImageView
         android:id="@+id/imageEmail"
-        android:layout_width="51dp"
-        android:layout_height="22dp"
+        android:layout_width="129dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="205dp"
         android:contentDescription="imageEmail"
-        app:srcCompat="@drawable/texteemail"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="238dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/texteemail" />
 
     <ImageView
         android:id="@+id/imagefirstname"
         android:layout_width="120dp"
         android:layout_height="24dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="136dp"
         android:contentDescription="imageEmail"
-        app:srcCompat="@drawable/firstname"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="159dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/firstname" />
 
     <ImageView
         android:id="@+id/imageage"
         android:layout_width="62dp"
         android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="484dp"
         android:contentDescription="imageEmail"
-        app:srcCompat="@drawable/age"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="498dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/age" />
 
     <ImageView
         android:id="@+id/imagepassword"
-        android:layout_width="134dp"
-        android:layout_height="24dp"
+        android:layout_width="135dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="282dp"
         android:contentDescription="imagePassword"
-        app:srcCompat="@drawable/textepassword"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="309dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/textepassword" />
 
     <ImageView
         android:id="@+id/imagegender"
         android:layout_width="104dp"
         android:layout_height="34dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="368dp"
         android:contentDescription="imageEmail"
-        app:srcCompat="@drawable/gender"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="386dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gender" />
 
 
 </android.support.constraint.ConstraintLayout>
