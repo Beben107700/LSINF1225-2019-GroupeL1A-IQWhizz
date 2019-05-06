@@ -108,6 +108,16 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return pass;
     }
 
+    public String getQuestion(){
+        //String[] arg = new String[];
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select texte From Question", null);
+        cursor.moveToFirst();
+        String q = cursor.getString(0);
+        cursor.close();
+        return q;
+    }
+
     public void init_Question(SQLiteDatabase db){
         String strsql = "INSERT INTO Question (\n" +
                 "                         theme,\n" +
