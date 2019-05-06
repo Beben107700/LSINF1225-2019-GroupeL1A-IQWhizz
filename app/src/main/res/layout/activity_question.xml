@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".question">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="329dp"
+        android:layout_height="435dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginBottom="432dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/imagelog_in" />
+
+    <TextView
+        android:id="@+id/time_left"
+        android:layout_width="150dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="528dp"
+        android:fontFamily="casual"
+        android:text="@string/time_left"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/the_timer"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="235dp"
+        android:layout_marginBottom="528dp"
+        android:fontFamily="casual"
+        android:text="3:00"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/titre_question"
+        android:layout_width="319dp"
+        android:layout_height="333dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="168dp"
+        android:fontFamily="casual"
+        android:text="Titre de la question"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
