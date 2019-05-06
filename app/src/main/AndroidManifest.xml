@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sing_in"></activity>
+        <activity android:name=".resultat"></activity>
+        <activity android:name=".sing_in" />
         <activity android:name=".Ecran_Menu" />
         <activity android:name=".settings" />
         <activity android:name=".home">
