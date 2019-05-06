@@ -44,8 +44,8 @@ public class sing_in extends AppCompatActivity {
 
                 databaseManager.insert_Utilisateur(mail_e.getText().toString(),
                         Integer.valueOf(age_e.getText().toString()),
-                        mdp_e.getText().toString(),
                         nom_e.getText().toString(),
+                        mdp_e.getText().toString(),
                         selected.getText().toString());
                 databaseManager.close();
 

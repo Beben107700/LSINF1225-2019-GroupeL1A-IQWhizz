@@ -9,7 +9,7 @@ import android.provider.ContactsContract;
 public class DatabaseManager extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "bdd";
-    private static final int DATABASE_VERSION = 10;
+    private static final int DATABASE_VERSION = 14;
 
 
     public DatabaseManager( Context context){
@@ -41,10 +41,10 @@ public class DatabaseManager extends SQLiteOpenHelper {
         db.execSQL(strSql5);
 
         String strSql1 = "create table Recap ("
-                + "   IDR double primary key not null,"
+                + "   IDR integer primary key autoincrement,"
                 + "   mail text not null references Utilisateur(mail),"
                 + "   IDT double not null references Test(IDT),"
-                + "   nduel integer not null)";
+                + "   nduel integer )";
         db.execSQL(strSql1);
 
         String strSql4 = "create table Choix ("
@@ -55,7 +55,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
         db.execSQL(strSql4);
 
         String strSql3 = "create table Reponses ("
-                + "   IDR double not null references Recap(IDR),"
+                + "   IDR integer not null references Recap(IDR),"
                 + "   tempsr text not null ,"
                 + "   IDC double not null references Choix(IDC),"
                 + "   IDQ double not null references Question(IDQ))";
@@ -63,6 +63,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
         this.init_Question(db);
         this.init_Choix(db);
+        this.init_Test(db);
     }
 
     @Override
@@ -107,6 +108,42 @@ public class DatabaseManager extends SQLiteOpenHelper {
         cursor.close();
         return pass;
     }
+
+    public int make_recap(String mail, double IDT, int nduel){
+        mail  =  mail.replace("'","''");
+        String strSQL = "insert into Recap(mail,IDT,nduel) values( '" + mail + "'," + IDT + "," + nduel + ")";
+        this.getWritableDatabase().execSQL(strSQL);
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select MAX(IDR) From Recap ",null);
+        cursor.moveToFirst();
+        int i = cursor.getInt(0);
+        cursor.close();
+        return i;
+    }
+
+    public void make_init_question(int IDR, double IDQ){
+        String strSql = "insert into Reponse(IDR, tempsr, IDC, IDQ) values ("+ IDR +",null, null, "+ IDQ +")";
+        this.getWritableDatabase().execSQL(strSql);
+    }
+
+    public void make_init_test(String mail, double IDT, int nduel){
+        int IDR = make_recap(mail, IDT, nduel);
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select nquestion From Test Where IDT = "+ IDT ,null );
+        cursor.moveToFirst();
+        int n = cursor.getInt(0);
+        cursor = db.rawQuery("Select IDQ from Question Order by random() Limit "+ n +"",null);
+        cursor.moveToFirst();
+        String strsql;
+        do{
+            double IDQ = cursor.getDouble(0);
+            make_init_question(IDR,IDQ);
+        }while(cursor.moveToNext());
+        cursor.close();
+
+    }
+
+
 
     public void init_Question(SQLiteDatabase db){
         String strsql = "INSERT INTO Question (\n" +
@@ -425,6 +462,40 @@ public class DatabaseManager extends SQLiteOpenHelper {
                 "                      10,\n" +
                 "                      10.4\n" +
                 "                  );\n";
+        db.execSQL(strsql);
+    }
+
+    public void init_Test(SQLiteDatabase db){
+        String strsql = " INSERT INTO Test (\n" +
+                "                     nquestion,\n" +
+                "                     theme,\n" +
+                "                     type,\n" +
+                "                     IDT\n" +
+                "                 )\n" +
+                "                 VALUES (\n" +
+                "                     5,\n" +
+                "                     'Math',\n" +
+                "                     'Rapide',\n" +
+                "                     1\n" +
+                "                 ),\n" +
+                "                 (\n" +
+                "                     40,\n" +
+                "                     'Math',\n" +
+                "                     'Long',\n" +
+                "                     2\n" +
+                "                 ),\n" +
+                "                 (\n" +
+                "                     40,\n" +
+                "                     'Logique',\n" +
+                "                     'Long',\n" +
+                "                     3\n" +
+                "                 ),\n" +
+                "                 (\n" +
+                "                     5,\n" +
+                "                     'Logique',\n" +
+                "                     'Rapide',\n" +
+                "                     4\n" +
+                "                 );\n";
         db.execSQL(strsql);
     }
 
