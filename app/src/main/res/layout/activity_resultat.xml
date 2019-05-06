@@ -23,12 +23,13 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
         android:layout_marginTop="172dp"
         android:text="Le QI de "
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="85dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TextName"
@@ -127,10 +128,12 @@
         android:id="@+id/TextQI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="21dp"
         android:text="est de XXX"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="225dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </android.support.constraint.ConstraintLayout>

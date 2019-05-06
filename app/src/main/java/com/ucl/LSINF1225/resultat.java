@@ -19,8 +19,7 @@ public class resultat extends AppCompatActivity {
         TextQI = (TextView)findViewById(R.id.TextQI);
         delete = (Button)findViewById(R.id.delete);
 
-        // TextView t1 = (TextView) findViewById(R.id.textView1);
-        // t1.setText("RRRRRR");
+        // TextName.setText("Nom d'utilisateur BDD");
 
     }
 }
