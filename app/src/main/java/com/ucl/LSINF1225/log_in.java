@@ -7,12 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class log_in extends AppCompatActivity {
+
+    private DatabaseManager databaseManager;
 
     private ImageButton log_in;
     private EditText mail_e;
     private EditText mdp_e;
+    private TextView message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,9 @@ public class log_in extends AppCompatActivity {
 
         mail_e = (EditText)findViewById(R.id.editEmail);
         mdp_e = (EditText)findViewById(R.id.editPassword);
+        message = (TextView) findViewById(R.id.LOOOL);
+
+        databaseManager = new DatabaseManager(this);
 
 
     }
@@ -30,10 +37,24 @@ public class log_in extends AppCompatActivity {
     public void goToEM(View v){
         //Fct qui s'éxécute qd tu pousses sur login
 
-//        String mail = mail_e.getText().toString();
-//        String mdp = mdp_e.getText().toString();
+        String mail = mail_e.getText().toString();
+        String mdp = mdp_e.getText().toString();
 
+        String mdp_v = databaseManager.get_Password(mail);
+
+        if(mdp.equals(mdp_v)){
+            Intent intent = new Intent(getApplicationContext(), Ecran_Menu.class);
+            startActivity(intent);
+        }
+        else{
+            message.setText("Wrong password!");
+        }
+    }
+
+    public void force(View V){
+        //Fct qui force l'acces
         Intent intent = new Intent(getApplicationContext(), Ecran_Menu.class);
         startActivity(intent);
+
     }
 }

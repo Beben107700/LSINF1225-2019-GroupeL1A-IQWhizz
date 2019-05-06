@@ -1,13 +1,14 @@
 package com.ucl.LSINF1225;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseManager extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "bdd";
-    private static final int DATABASE_VERSION = 7;
+    private static final int DATABASE_VERSION = 10;
 
 
     public DatabaseManager( Context context){
@@ -94,7 +95,16 @@ public class DatabaseManager extends SQLiteOpenHelper {
         String strSQL = "insert into Utilisateur(mail,age,nom,mdp,genre) values ('"
                 + mail+ "', " + age +  ",'" + nom + "','" + mdp +"','" + genre  +"')";
         this.getWritableDatabase().execSQL(strSQL);
+    }
 
+    public String get_Password(String mail){
+        String[] arg = new String[]{mail};
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select mdp From Utilisateur Where mail = ?", arg);
+        cursor.moveToFirst();
+        String pass = cursor.getString(0);
+        cursor.close();
+        return pass;
     }
 
     public void init_Question(SQLiteDatabase db){

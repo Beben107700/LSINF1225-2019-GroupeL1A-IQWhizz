@@ -23,21 +23,27 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="9f8b28fe-8d6c-4bb4-a77b-927d1a62aba7">
+        <schema name="main" object-types="constraint, column, index, view, dataset trigger, table" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="9f500518-d439-4a4e-9ac6-f08917964720">
+    <connection id="9f8b28fe-8d6c-4bb4-a77b-927d1a62aba7">
       <console name="Connection" type="STANDARD" schema="main" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="9f8b28fe-8d6c-4bb4-a77b-927d1a62aba7" object-ref="schemas/main/tables/Utilisateur" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="9f500518-d439-4a4e-9ac6-f08917964720" />
+    <connection id="9f8b28fe-8d6c-4bb4-a77b-927d1a62aba7" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="9f500518-d439-4a4e-9ac6-f08917964720" dataset="main.Utilisateur" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="9f8b28fe-8d6c-4bb4-a77b-927d1a62aba7" dataset="main.Utilisateur" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -62,7 +68,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="9f500518-d439-4a4e-9ac6-f08917964720" active="true">
+      <connection id="9f8b28fe-8d6c-4bb4-a77b-927d1a62aba7" active="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -77,7 +83,7 @@
           <port value="" />
           <database value="" />
           <files>
-            <file path="D:\Users\Documents\AndroidStudio\DeviceExplorer\Pixel_3_XL_API_28 [emulator-5554]\data\data\com.ucl.LSINF1225\databases\bdd" schema="main" />
+            <file path="C:\Users\Damien\Desktop\Nouveau dossier\bdd" schema="main" />
           </files>
           <os-authentication value="false" />
           <empty-authentication value="false" />
