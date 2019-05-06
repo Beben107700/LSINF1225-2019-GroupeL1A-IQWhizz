@@ -24,24 +24,30 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="9f500518-d439-4a4e-9ac6-f08917964720">
-        <schema name="main" object-types="table, view" />
+      <connection connection-id="d9b99413-e6ef-4a61-bd7d-2401a40213f4">
+        <schema name="main" object-types="view, constraint, table, column, dataset trigger, index" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="9f500518-d439-4a4e-9ac6-f08917964720">
-      <console name="Connection" type="STANDARD" schema="main" session="Main" />
+    <connection id="d9b99413-e6ef-4a61-bd7d-2401a40213f4">
+      <console name="Connection 1" type="STANDARD" schema="main" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="d9b99413-e6ef-4a61-bd7d-2401a40213f4" object-ref="schemas/main/tables/Choix" />
+      <object connection-id="d9b99413-e6ef-4a61-bd7d-2401a40213f4" object-ref="schemas/main/tables/Utilisateur" />
+      <object connection-id="d9b99413-e6ef-4a61-bd7d-2401a40213f4" object-ref="schemas/main/tables/Question" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="9f500518-d439-4a4e-9ac6-f08917964720" />
+    <connection id="d9b99413-e6ef-4a61-bd7d-2401a40213f4" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="9f500518-d439-4a4e-9ac6-f08917964720" dataset="main.Utilisateur" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d9b99413-e6ef-4a61-bd7d-2401a40213f4" dataset="main.Utilisateur" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d9b99413-e6ef-4a61-bd7d-2401a40213f4" dataset="main.Question" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d9b99413-e6ef-4a61-bd7d-2401a40213f4" dataset="main.Choix" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -66,9 +72,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="9f500518-d439-4a4e-9ac6-f08917964720" active="true">
+      <connection id="d9b99413-e6ef-4a61-bd7d-2401a40213f4" active="true">
         <database>
-          <name value="Connection" />
+          <name value="Connection 1" />
           <description value="" />
           <database-type value="SQLITE" />
           <config-type value="BASIC" />
@@ -81,7 +87,7 @@
           <port value="" />
           <database value="" />
           <files>
-            <file path="D:\Users\Documents\AndroidStudio\DeviceExplorer\Pixel_3_XL_API_28 [emulator-5554]\data\data\com.ucl.LSINF1225\databases\bdd" schema="main" />
+            <file path="C:\Users\Damien\Desktop\Nouveau dossier\bdd" schema="main" />
           </files>
           <os-authentication value="false" />
           <empty-authentication value="false" />
