@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.ContactsContract;
+import android.util.Pair;
 
 public class DatabaseManager extends SQLiteOpenHelper {
 
@@ -109,14 +110,30 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return pass;
     }
 
-    public String getQuestion(){
-        //String[] arg = new String[];
+    public String[] getQuestion(){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("Select texte From Question", null);
         cursor.moveToFirst();
         String q = cursor.getString(0);
+        cursor = db.rawQuery("Select IDQ From Question", null);
+        cursor.moveToFirst();
+        String id = cursor.getString(0);
         cursor.close();
-        return q;
+        return new String[]{q, id};
+    }
+
+    public String[] getChoix(String IDQ){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] ID = new String[]{IDQ};
+        Cursor cursor = db.rawQuery("Select possiblite From Choix where IDQ = ?", ID);
+        cursor.moveToFirst();
+        String[] c = new String[4];
+        for (int i=0; i<4; i++){
+            c[i] = cursor.getString(0);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return c;
     }
     
     public int make_recap(String mail, double IDT, int nduel){

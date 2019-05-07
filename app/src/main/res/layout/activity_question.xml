@@ -6,12 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".question">
 
+    <Button
+        android:id="@+id/button_choix1"
+        android:layout_width="124dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginBottom="132dp"
+        android:background="@android:color/background_light"
+        android:fontFamily="casual"
+        android:text="@string/Done"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_choix2"
+        android:layout_width="124dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginBottom="244dp"
+        android:background="@android:color/background_light"
+        android:fontFamily="casual"
+        android:text="@string/Done"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/logo"
         android:layout_width="329dp"
         android:layout_height="435dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginBottom="432dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="376dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/imagelog_in" />
@@ -21,7 +51,7 @@
         android:layout_width="150dp"
         android:layout_height="43dp"
         android:layout_marginStart="40dp"
-        android:layout_marginBottom="528dp"
+        android:layout_marginBottom="500dp"
         android:fontFamily="casual"
         android:text="@string/time_left"
         android:textColor="@android:color/holo_blue_light"
@@ -34,8 +64,8 @@
         android:id="@+id/the_timer"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginStart="235dp"
-        android:layout_marginBottom="528dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginBottom="500dp"
         android:fontFamily="casual"
         android:text="3:00"
         android:textColor="@android:color/holo_blue_light"
@@ -46,14 +76,45 @@
 
     <TextView
         android:id="@+id/titre_question"
-        android:layout_width="319dp"
-        android:layout_height="333dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="168dp"
+        android:layout_width="311dp"
+        android:layout_height="321dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="124dp"
         android:fontFamily="casual"
         android:text="Titre de la question"
+        android:textAlignment="center"
         android:textColor="@android:color/holo_blue_light"
         android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_choix3"
+        android:layout_width="124dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginBottom="244dp"
+        android:background="@android:color/background_light"
+        android:fontFamily="casual"
+        android:text="@string/Done"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_choix4"
+        android:layout_width="124dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="132dp"
+        android:background="@android:color/background_light"
+        android:fontFamily="casual"
+        android:text="@string/Done"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
