@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseManager extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "bdd";
-    private static final int DATABASE_VERSION = 20;
+    private static final int DATABASE_VERSION = 22;
 
 
     public DatabaseManager( Context context){
@@ -22,7 +22,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
                 + "   age integer not null,"
                 + "   nom text not null,"
                 + "   mdp text not null,"
-                + "   genre text not null)";
+                + "   genre text)";
         db.execSQL(strSql);
 
         String strSql2 = "create table Test ("
@@ -57,7 +57,8 @@ public class DatabaseManager extends SQLiteOpenHelper {
                 + "   IDR integer not null references Recap(IDR),"
                 + "   tempsr text,"
                 + "   IDC double references Choix(IDC),"
-                + "   IDQ double not null references Question(IDQ))";
+                + "   IDQ double not null references Question(IDQ),"
+                + "   UNIQUE(IDR,IDQ))";
         db.execSQL(strSql3);
 
         this.init_Question(db);

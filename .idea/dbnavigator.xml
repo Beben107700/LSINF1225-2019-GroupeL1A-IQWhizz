@@ -24,13 +24,13 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="9f8b28fe-8d6c-4bb4-a77b-927d1a62aba7">
-        <schema name="main" object-types="view, table" />
+      <connection connection-id="d8614544-0f68-40c9-9090-eda9844711c4">
+        <schema name="main" object-types="column, dataset trigger, constraint, index, table, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="9f8b28fe-8d6c-4bb4-a77b-927d1a62aba7">
+    <connection id="d8614544-0f68-40c9-9090-eda9844711c4">
       <console name="Connection" type="STANDARD" schema="main" session="Main" />
     </connection>
   </component>
@@ -38,10 +38,13 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="9f8b28fe-8d6c-4bb4-a77b-927d1a62aba7" />
+    <connection id="d8614544-0f68-40c9-9090-eda9844711c4" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="9f8b28fe-8d6c-4bb4-a77b-927d1a62aba7" dataset="main.Utilisateur" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d8614544-0f68-40c9-9090-eda9844711c4" dataset="main.Utilisateur" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d8614544-0f68-40c9-9090-eda9844711c4" dataset="main.Recap" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d8614544-0f68-40c9-9090-eda9844711c4" dataset="main.Choix" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d8614544-0f68-40c9-9090-eda9844711c4" dataset="main.Reponses" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -66,7 +69,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="9f8b28fe-8d6c-4bb4-a77b-927d1a62aba7" active="true">
+      <connection id="d8614544-0f68-40c9-9090-eda9844711c4" active="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -81,7 +84,7 @@
           <port value="" />
           <database value="" />
           <files>
-            <file path="C:\Users\Damien\Desktop\Nouveau dossier\bdd" schema="main" />
+            <file path="C:\Users\Damien\Desktop\bdd\bdd" schema="main" />
           </files>
           <os-authentication value="false" />
           <empty-authentication value="false" />

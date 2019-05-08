@@ -45,10 +45,6 @@ public class question extends AppCompatActivity {
         question_text = findViewById(R.id.titre_question);
         question_text.setText(q_string);
 
-
-
-
-
         Texte_question = (TextView)findViewById(R.id.titre_question);
         p1 = (Button)findViewById(R.id.pos1);
         p2 = (Button)findViewById(R.id.pos2);
