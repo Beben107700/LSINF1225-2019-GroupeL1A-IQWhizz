@@ -1,5 +1,6 @@
 package com.ucl.LSINF1225;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.CountDownTimer;
@@ -72,7 +73,9 @@ public class question extends AppCompatActivity {
                 if(cursor.moveToNext()){
                     next_quest(cursor);
                 }
-                else{}
+                else{
+                    startResult();
+                }
             }
         });
         p2.setOnClickListener(new View.OnClickListener(){
@@ -82,7 +85,7 @@ public class question extends AppCompatActivity {
                 if(cursor.moveToNext()){
                     next_quest(cursor);
                 }
-                else{}
+                else{startResult();}
             }
         });
         p3.setOnClickListener(new View.OnClickListener(){
@@ -92,7 +95,7 @@ public class question extends AppCompatActivity {
                 if(cursor.moveToNext()){
                     next_quest(cursor);
                 }
-                else{}
+                else{startResult();}
             }
         });
         p4.setOnClickListener(new View.OnClickListener(){
@@ -102,7 +105,7 @@ public class question extends AppCompatActivity {
                 if(cursor.moveToNext()){
                     next_quest(cursor);
                 }
-                else{}
+                else{startResult();}
             }
         });
 
@@ -148,5 +151,10 @@ public class question extends AppCompatActivity {
         p2.setText(databaseManager.get_choix_texte(tab[1]));
         p3.setText(databaseManager.get_choix_texte(tab[2]));
         p4.setText(databaseManager.get_choix_texte(tab[3]));
+    }
+
+    private void startResult(){
+        Intent intent = new Intent(getApplicationContext(), resultat.class);
+        startActivity(intent);
     }
 }
