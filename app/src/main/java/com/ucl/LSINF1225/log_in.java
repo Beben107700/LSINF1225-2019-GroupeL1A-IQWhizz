@@ -43,6 +43,8 @@ public class log_in extends AppCompatActivity {
         String mdp_v = databaseManager.get_Password(mail);
 
         if(mdp.equals(mdp_v)){
+            Global.mail_connect = mail;
+            Global.name_connect = databaseManager.get_Name(mail);
             Intent intent = new Intent(getApplicationContext(), Ecran_Menu.class);
             startActivity(intent);
         }
