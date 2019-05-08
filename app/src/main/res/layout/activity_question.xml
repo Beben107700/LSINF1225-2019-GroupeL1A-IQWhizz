@@ -7,7 +7,7 @@
     tools:context=".question">
 
     <Button
-        android:id="@+id/button_choix1"
+        android:id="@+id/pos4"
         android:layout_width="124dp"
         android:layout_height="92dp"
         android:layout_marginStart="220dp"
@@ -22,10 +22,10 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button_choix2"
+        android:id="@+id/pos1"
         android:layout_width="124dp"
         android:layout_height="92dp"
-        android:layout_marginStart="49dp"
+        android:layout_marginStart="52dp"
         android:layout_marginBottom="244dp"
         android:background="@android:color/background_light"
         android:fontFamily="casual"
@@ -38,12 +38,13 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="329dp"
-        android:layout_height="435dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="376dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="328dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/imagelog_in" />
 
     <TextView
@@ -76,21 +77,21 @@
 
     <TextView
         android:id="@+id/titre_question"
-        android:layout_width="311dp"
-        android:layout_height="321dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="124dp"
+        android:layout_width="307dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="264dp"
         android:fontFamily="casual"
         android:text="Titre de la question"
         android:textAlignment="center"
         android:textColor="@android:color/holo_blue_light"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_choix3"
+        android:id="@+id/pos2"
         android:layout_width="124dp"
         android:layout_height="92dp"
         android:layout_marginStart="220dp"
@@ -105,7 +106,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button_choix4"
+        android:id="@+id/pos3"
         android:layout_width="124dp"
         android:layout_height="92dp"
         android:layout_marginStart="52dp"

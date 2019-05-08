@@ -4,13 +4,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.ContactsContract;
-import android.util.Pair;
 
 public class DatabaseManager extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "bdd";
-    private static final int DATABASE_VERSION = 14;
+    private static final int DATABASE_VERSION = 20;
 
 
     public DatabaseManager( Context context){
@@ -34,12 +32,12 @@ public class DatabaseManager extends SQLiteOpenHelper {
                 + "   nquestion integer not null)";
         db.execSQL(strSql2);
 
-        String strSql5 = "create table Question ("
+        String strsql5 = "create table Question ("
                 + "   IDQ double primary key not null,"
                 + "   texte text not null,"
                 + "   image blob,"
                 + "   theme text not null)";
-        db.execSQL(strSql5);
+        db.execSQL(strsql5);
 
         String strSql1 = "create table Recap ("
                 + "   IDR integer primary key autoincrement,"
@@ -57,8 +55,8 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
         String strSql3 = "create table Reponses ("
                 + "   IDR integer not null references Recap(IDR),"
-                + "   tempsr text not null ,"
-                + "   IDC double not null references Choix(IDC),"
+                + "   tempsr text,"
+                + "   IDC double references Choix(IDC),"
                 + "   IDQ double not null references Question(IDQ))";
         db.execSQL(strSql3);
 
@@ -110,6 +108,16 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return pass;
     }
 
+    public String get_Name(String mail){
+        String[] arg = new String[]{mail};
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select nom From Utilisateur Where mail = ?", arg);
+        cursor.moveToFirst();
+        String name = cursor.getString(0);
+        cursor.close();
+        return name;
+    }
+
     public String[] getQuestion(){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("Select texte From Question", null);
@@ -125,7 +133,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
     public String[] getChoix(String IDQ){
         SQLiteDatabase db = this.getReadableDatabase();
         String[] ID = new String[]{IDQ};
-        Cursor cursor = db.rawQuery("Select possiblite From Choix where IDQ = ?", ID);
+        Cursor cursor = db.rawQuery("Select possibilite From Choix where IDQ = ?", ID);
         cursor.moveToFirst();
         String[] c = new String[4];
         for (int i=0; i<4; i++){
@@ -135,7 +143,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
         cursor.close();
         return c;
     }
-    
+
     public int make_recap(String mail, double IDT, int nduel){
         mail  =  mail.replace("'","''");
         String strSQL = "insert into Recap(mail,IDT,nduel) values( '" + mail + "'," + IDT + "," + nduel + ")";
@@ -149,12 +157,12 @@ public class DatabaseManager extends SQLiteOpenHelper {
     }
 
     public void make_init_question(int IDR, double IDQ){
-        String strSql = "insert into Reponse(IDR, tempsr, IDC, IDQ) values ("+ IDR +",null, null, "+ IDQ +")";
+        String strSql = "insert into Reponses(IDR, tempsr, IDC, IDQ) values ("+ IDR +",null, null, "+ IDQ +")";
         this.getWritableDatabase().execSQL(strSql);
     }
 
-    public void make_init_test(String mail, double IDT, int nduel){
-        int IDR = make_recap(mail, IDT, nduel);
+    public int make_init_test(String mail, double IDT, int nduel){
+        int IDR = this.make_recap(mail, IDT, nduel);
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("Select nquestion From Test Where IDT = "+ IDT ,null );
         cursor.moveToFirst();
@@ -167,7 +175,43 @@ public class DatabaseManager extends SQLiteOpenHelper {
             make_init_question(IDR,IDQ);
         }while(cursor.moveToNext());
         cursor.close();
+        return IDR;
+    }
 
+    public String get_question_texte(double IDQ){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select texte From Question Where IDQ = "+ IDQ +"", null);
+        cursor.moveToFirst();
+        String texte = cursor.getString(0);
+        cursor.close();
+        return texte;
+    }
+
+    public double[] get_choix_idc(double IDQ){
+        double[] tableau = new double[4];
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select IDC from Choix where IDQ = " + IDQ,null);
+        cursor.moveToFirst();
+        for(int i = 0; i < 4; i++){
+            tableau[i]= cursor.getDouble(0);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return tableau ;
+    }
+
+    public String get_choix_texte(double IDC){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select possibilite From Choix Where IDC = "+ IDC , null);
+        cursor.moveToFirst();
+        String texte = cursor.getString(0);
+        cursor.close();
+        return texte;
+    }
+
+    public void set_reponse(int IDR, double IDQ, double IDC){
+        String strsql = "Update Reponses set IDC = "+ IDC +" where IDR = "+IDR+" AND IDQ = " + IDQ ;
+        this.getWritableDatabase().execSQL(strsql);
     }
 
 
