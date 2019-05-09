@@ -37,32 +37,20 @@ public class sing_in extends AppCompatActivity {
 
         databaseManager = new DatabaseManager(this);
 
-        create.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selected = (RadioButton) findViewById(genre_e.getCheckedRadioButtonId());
-
-                databaseManager.insert_Utilisateur(mail_e.getText().toString(),
-                        Integer.valueOf(age_e.getText().toString()),
-                        nom_e.getText().toString(),
-                        mdp_e.getText().toString(),
-                        selected.getText().toString());
-                databaseManager.close();
-
-                Intent act = new Intent(getApplicationContext(),log_in.class);
-                startActivity(act);
-
-
-            }
-        });
-
-
     }
 
     public void goToEM(View v){
-        //Fct qui s'éxécute qd tu pousses sur login
-        Intent intent = new Intent(getApplicationContext(), Ecran_Menu.class);
-        startActivity(intent);
+        selected = (RadioButton) findViewById(genre_e.getCheckedRadioButtonId());
+
+        Utilisateur.insert(this,mail_e.getText().toString(),
+                Integer.valueOf(age_e.getText().toString()),
+                nom_e.getText().toString(),
+                mdp_e.getText().toString(),
+                selected.getText().toString());
+        databaseManager.close();
+
+        Intent act = new Intent(getApplicationContext(),log_in.class);
+        startActivity(act);
     }
 
 

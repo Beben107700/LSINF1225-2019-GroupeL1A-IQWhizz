@@ -30,8 +30,6 @@ public class log_in extends AppCompatActivity {
         message = (TextView) findViewById(R.id.LOOOL);
 
         databaseManager = new DatabaseManager(this);
-
-
     }
 
     public void goToEM(View v){
@@ -40,11 +38,11 @@ public class log_in extends AppCompatActivity {
         String mail = mail_e.getText().toString();
         String mdp = mdp_e.getText().toString();
 
-        String mdp_v = databaseManager.get_Password(mail);
+        String mdp_v = Utilisateur.get_password(this,mail);
 
         if(mdp.equals(mdp_v)){
             Global.mail_connect = mail;
-            Global.name_connect = databaseManager.get_Name(mail);
+            Global.name_connect = Utilisateur.get_name(this,mail);
             Intent intent = new Intent(getApplicationContext(), Ecran_Menu.class);
             startActivity(intent);
         }
