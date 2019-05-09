@@ -1,5 +1,6 @@
 package com.ucl.LSINF1225;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -28,10 +29,6 @@ public class question extends AppCompatActivity {
     double IDQ;
     double[] tab;
     Cursor cursor;
-    private TextView question_text;
-    private DatabaseManager db_manager;
-    private String q_string;
-    private String[] C_string;
 
 
     @Override
@@ -40,11 +37,7 @@ public class question extends AppCompatActivity {
         setContentView(R.layout.activity_question);
         Timer_text = findViewById(R.id.the_timer);
         start_countdown();
-        db_manager = new DatabaseManager(this);
-        q_string = db_manager.getQuestion()[0];
-        C_string = db_manager.getChoix(db_manager.getQuestion()[1]);
-        question_text = findViewById(R.id.titre_question);
-        question_text.setText(q_string);
+        final Context cont = this;
 
         Texte_question = (TextView)findViewById(R.id.titre_question);
         p1 = (Button)findViewById(R.id.pos1);
@@ -59,17 +52,15 @@ public class question extends AppCompatActivity {
         cursor.moveToFirst();
 
         IDQ = cursor.getDouble(0);
-        Texte_question.setText(databaseManager.get_question_texte(IDQ));
-        tab =databaseManager.get_choix_idc(IDQ);
-        done = false;
-        p1.setText(databaseManager.get_choix_texte(tab[0]));
-        p2.setText(databaseManager.get_choix_texte(tab[1]));
-        p3.setText(databaseManager.get_choix_texte(tab[2]));
-        p4.setText(databaseManager.get_choix_texte(tab[3]));
+        Texte_question.setText(Quest.get_texte(this,IDQ));
+        tab =Quest.get_choix_idc(this,IDQ);
+        p1.setText(Choix.get_texte(this,tab[0]));
+        p2.setText(Choix.get_texte(this,tab[1]));
+        p3.setText(Choix.get_texte(this,tab[2]));
+        p4.setText(Choix.get_texte(this,tab[3]));
         p1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                databaseManager.set_reponse(IDR,IDQ,tab[0]);
-                done = true;
+                Reponse.set(cont,IDR,IDQ,tab[0]);
                 if(cursor.moveToNext()){
                     next_quest(cursor);
                 }
@@ -80,8 +71,7 @@ public class question extends AppCompatActivity {
         });
         p2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                databaseManager.set_reponse(IDR,IDQ,tab[1]);
-                done = true;
+                Reponse.set(cont,IDR,IDQ,tab[1]);
                 if(cursor.moveToNext()){
                     next_quest(cursor);
                 }
@@ -90,8 +80,7 @@ public class question extends AppCompatActivity {
         });
         p3.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                databaseManager.set_reponse(IDR,IDQ,tab[2]);
-                done = true;
+                Reponse.set(cont,IDR,IDQ,tab[2]);
                 if(cursor.moveToNext()){
                     next_quest(cursor);
                 }
@@ -100,8 +89,7 @@ public class question extends AppCompatActivity {
         });
         p4.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                databaseManager.set_reponse(IDR,IDQ,tab[3]);
-                done = true;
+                Reponse.set(cont,IDR,IDQ,tab[3]);
                 if(cursor.moveToNext()){
                     next_quest(cursor);
                 }
@@ -144,13 +132,13 @@ public class question extends AppCompatActivity {
 
     private void next_quest(Cursor cursor){
         IDQ = cursor.getDouble(0);
-        Texte_question.setText(databaseManager.get_question_texte(IDQ));
-        tab =databaseManager.get_choix_idc(IDQ);
+        Texte_question.setText(Quest.get_texte(this,IDQ));
+        tab =Quest.get_choix_idc(this,IDQ);
         done = false;
-        p1.setText(databaseManager.get_choix_texte(tab[0]));
-        p2.setText(databaseManager.get_choix_texte(tab[1]));
-        p3.setText(databaseManager.get_choix_texte(tab[2]));
-        p4.setText(databaseManager.get_choix_texte(tab[3]));
+        p1.setText(Choix.get_texte(this,tab[0]));
+        p2.setText(Choix.get_texte(this,tab[1]));
+        p3.setText(Choix.get_texte(this,tab[2]));
+        p4.setText(Choix.get_texte(this,tab[3]));
     }
 
     private void startResult(){

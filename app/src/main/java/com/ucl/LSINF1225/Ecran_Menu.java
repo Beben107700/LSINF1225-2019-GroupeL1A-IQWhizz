@@ -37,7 +37,7 @@ public class Ecran_Menu extends AppCompatActivity {
     }
     public void goToQuick(View view) {
         DatabaseManager db = new DatabaseManager(this) ;
-        int IDR = db.make_init_test(Global.mail_connect,1.0,0);
+        int IDR = Recap.init_test(this,Global.mail_connect,1.0,0);
         Global.idr_actif = IDR;
         Intent intent = new Intent(this, question.class);
         startActivity(intent);

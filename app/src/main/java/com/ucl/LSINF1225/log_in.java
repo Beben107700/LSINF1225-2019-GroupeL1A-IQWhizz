@@ -11,8 +11,6 @@ import android.widget.TextView;
 
 public class log_in extends AppCompatActivity {
 
-    private DatabaseManager databaseManager;
-
     private ImageButton log_in;
     private EditText mail_e;
     private EditText mdp_e;
@@ -28,8 +26,6 @@ public class log_in extends AppCompatActivity {
         mail_e = (EditText)findViewById(R.id.editEmail);
         mdp_e = (EditText)findViewById(R.id.editPassword);
         message = (TextView) findViewById(R.id.LOOOL);
-
-        databaseManager = new DatabaseManager(this);
     }
 
     public void goToEM(View v){
@@ -49,12 +45,5 @@ public class log_in extends AppCompatActivity {
         else{
             message.setText("Wrong password!");
         }
-    }
-
-    public void force(View V){
-        //Fct qui force l'acces
-        Intent intent = new Intent(getApplicationContext(), Ecran_Menu.class);
-        startActivity(intent);
-
     }
 }
