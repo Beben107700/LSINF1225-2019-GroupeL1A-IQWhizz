@@ -47,7 +47,7 @@ public class Ecran_Menu extends AppCompatActivity {
         startActivity(intent);
     }
     public void goToResults(View view) {
-        //Intent intent = new Intent(this, my_results.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, MyResults.class);
+        startActivity(intent);
     }
 }
